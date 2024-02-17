@@ -1,0 +1,12 @@
+services:
+  arr-cleaner:
+    image: arr-cleaner 
+    container_name: arr-cleaner
+    network_mode: "host"
+    environment:
+      SONARR_API_KEY: ${SONARR_API_KEY}
+      RADARR_API_KEY: ${RADARR_API_KEY}
+      SONARR_URL: 'http://localhost:8989'
+      RADARR_URL: 'http://localhost:7878'
+      API_TIMEOUT: '3600'
+    restart: unless-stopped

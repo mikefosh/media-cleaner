@@ -1,3 +1,7 @@
+Modified the original repo to use the qbittorrent api to look for downloads stuck downloading metadata at 0%. They get removed if they have existed for >= 1hr. 
+
+
+Original Readme:
 # sonarr-radarr-queue-cleaner
 A simple Sonarr and Radarr script to clean out stalled downloads.
 Couldn't find a python script to do this job so I figured why not give it a try.
