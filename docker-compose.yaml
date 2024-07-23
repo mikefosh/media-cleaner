@@ -22,11 +22,11 @@ services:
       traefik.enable: true 
       traefik.http.routers.media-cleaner-http.entrypoints: web 
       traefik.http.routers.media-cleaner-http.middlewares: globalHeaders@file,redirect-to-https@docker,robotHeaders@file,cloudflarewarp@docker,authelia@docker 
-      traefik.http.routers.media-cleaner-http.rule: Host(`cleaner.foshinbaur.com`) 
+      traefik.http.routers.media-cleaner-http.rule: Host(`cleaner.domain.com`) 
       traefik.http.routers.media-cleaner-http.service: media-cleaner 
       traefik.http.routers.media-cleaner.entrypoints: websecure 
       traefik.http.routers.media-cleaner.middlewares: globalHeaders@file,secureHeaders@file,robotHeaders@file,cloudflarewarp@docker,authelia@docker 
-      traefik.http.routers.media-cleaner.rule: Host(`cleaner.foshinbaur.com`) 
+      traefik.http.routers.media-cleaner.rule: Host(`cleaner.domain.com`) 
       traefik.http.routers.media-cleaner.service: media-cleaner 
       traefik.http.routers.media-cleaner.tls.certresolver: cfdns 
       traefik.http.routers.media-cleaner.tls.options: securetls@file 
