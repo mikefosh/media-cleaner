@@ -8,7 +8,7 @@ services:
       - SONARR_API_KEY=123456
       - RADARR_API_KEY=123456
       - QBIT_USER=admin
-	  - QBIT_PASS=password
+      - QBIT_PASS=password
       - SONARR_URL=http://sonarr:8989
       - RADARR_URL=http://radarr:7878
       - API_TIMEOUT=3600
