@@ -33,8 +33,8 @@ API_TIMEOUT = int(os.environ['API_TIMEOUT']) # Set in Compose File
 conn_info = dict(
     host="qbittorrent",
     port=8080,
-    username=(os.environ['QBIT-USER']),
-    password=(os.environ['QBIT-PASS']),
+    username=(os.environ['QBIT_USER']),
+    password=(os.environ['QBIT_PASS']),
 )
 
 # Function to make API requests with error handling
