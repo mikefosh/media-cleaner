@@ -18,13 +18,6 @@ logging.basicConfig(
     handlers=[logging.StreamHandler()]
 )
 
-conn_info = dict(
-    host="localhost",
-    port=8080,
-    username="admin",
-    password="adminadmin",
-)
-
 # Sonarr and Radarr API endpoints
 SONARR_API_URL = (os.environ['SONARR_URL']) + "/api/v3"
 RADARR_API_URL = (os.environ['RADARR_URL']) + "/api/v3"
@@ -33,17 +26,16 @@ RADARR_API_URL = (os.environ['RADARR_URL']) + "/api/v3"
 SONARR_API_KEY = (os.environ['SONARR_API_KEY'])
 RADARR_API_KEY = (os.environ['RADARR_API_KEY'])
 
+
 # Timeout for API requests in seconds
-API_TIMEOUT = int(os.environ['API_TIMEOUT']) # 10 minutes
+API_TIMEOUT = int(os.environ['API_TIMEOUT']) # Set in Compose File
 
-
-
-
-# SONARR_API_KEY ='9c444f5d4fb64a29ab6cbda8559d1e36'
-# RADARR_API_KEY = '11173ac857bb42f4a135957ac6d44ab3'
-# SONARR_API_URL = 'http://localhost:8989' + "/api/v3"
-# RADARR_API_URL = 'http://localhost:7878'+ "/api/v3"
-# API_TIMEOUT = '600'
+conn_info = dict(
+    host="qbittorrent",
+    port=8080,
+    username=(os.environ['QBIT-USER']),
+    password=(os.environ['QBIT-PASS']),
+)
 
 # Function to make API requests with error handling
 async def make_api_request(url, api_key, params=None):
